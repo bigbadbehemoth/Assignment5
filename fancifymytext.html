@@ -2,9 +2,6 @@
 <html>
 	<head>
 		<title>Fancify Shamcify</title>
-
-		<script src="app.js"></script>
-		
 	</head>
 
 	<body>
@@ -13,15 +10,22 @@
 		<form>
 			<fieldset>
 				<legend>Text</legend>
-				<input type="text" name="userText" id="userText"/>
+				<textarea id="userText" name="userText" rows="4" cols="30"></textarea>
 			</fieldset>
 		</form>
 		<form>
 			<fieldset>
 				<legend>Fancify</legend>
-				<input type="button" id="btn" name="bigger" value="Bigger!"/>
+				<button type="button" id="bigger" name="bigger" onclick="bigger()">Bigger!</button><br>
+				<input type="radio" id="fancy" name="textStyle" value="F" onchange="styleChange(); fancify()">
+				<label for="fancy">FancyShmancy</label><br>
+				<input type="radio"	id="boring" name="textStyle" value="B" onchange="styleChange(); boringbetty()">
+				<label for="boring">BoringBetty</label><br>
+				<button type="button" id="moo" name="moo" onclick="moo()">Moo</button>
+
 			</fieldset>
 		</form>
-		
+		<!--Script is placed here because I was getting null errors otherwise-->
+		<script src="fancifymytext.js"></script>
 	</body>
 </html>
